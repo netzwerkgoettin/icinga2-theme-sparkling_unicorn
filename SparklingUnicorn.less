@@ -1,0 +1,119 @@
+/*! Icinga Web 2 | (c) 2015 Icinga Development Team | GPLv2+ */
+
+@su-pink-d:	#e40488;
+@su-pink-l:	#e885bc;
+@su-rose:	#e8dae2;
+//--
+@su-orange-d:	#f89b27;
+@su-orange-l:	#fbcf89;
+//--
+@su-blue-d:	#47b9ef;
+@su-blue-l:	#84defc;
+//--
+//	@su-green-d:	#00ce95;
+@su-green-d:	#009600;
+//@su-green-l:	#...;
+//--
+@su-purple-d:	#9B30FF;
+//@su-purple-l:	#...;
+//--
+@su-yellow-d:	#f5f37d;
+@su-yellow-l:	#fcfbcf;
+//---
+@su-white:	#fff;
+
+@color-critical: @su-pink-d;
+@color-critical-handled: @su-pink-l;
+@color-warning: @su-orange-d;
+@color-warning-handled: @su-orange-l;
+@color-ok: @su-green-d;
+@color-unknown: @su-blue-d;
+@color-unknown-handled: @su-blue-l;
+@color-unreachable: #44BB77;
+@color-unreachable-handled: #44BB77;
+@color-pending: @su-purple-d;
+
+// My icinga-blue is pink in fact
+@icinga-blue: #e40488;
+/**** Gradient background */
+#layout {
+ background: @su-yellow-l; /* For browsers that do not support gradients */
+ background: -webkit-linear-gradient(left, @su-yellow-l, @su-white); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(right, @su-yellow-l, @su-white); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(right, @su-yellow-l, @su-white); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(to right, @su-yellow-l, @su-white); /* Standard syntax */
+  color: #000;
+// font-family: fantasy; 
+}
+
+/*** Some defaults */
+
+@tr-active-color: @su-yellow-l;
+@tr-hover-color: @su-yellow-d;
+
+/** Sparkle, from http://cssdeck.com/labs/sparkle */
+
+#header, #login {
+  background: @su-pink-d;
+background-repeat:  no-repeat;
+  background-position: center center;
+  background-image: url(../img/Unicorn_Rainbow_Wallpaper.jpg);
+  // fallback ie 9
+  background-size: 75% 75%;
+  background-size: cover;
+}
+
+#header-logo-container {
+  background: @su-pink-d;
+}
+
+.tabs > li > a {
+  background: @su-pink-d;
+}
+
+.tabs > li.active > a, .tabs > li > a:focus {
+  background: @su-yellow-l;
+}
+
+.controls {
+  background: @su-yellow-l;
+}
+
+.impact {
+    .transition(background-color 2s 1s linear !important);
+    background-color: @su-rose !important;
+}
+
+.impact > .controls, .impact li.active a {
+  .transition(background-color 2s 1s linear !important);
+  background-color: @su-rose !important;
+}
+
+@keyframes sparkle {
+  0%, 100%{background-position:0px 0}
+  20%{background-position:20px 0}
+  40%{background-position:40px 0}  
+  60%{background-position:60px 0}
+  80%{background-position:80px 0}
+}
+@keyframes movetop {
+  0%, 100%{top:0;}
+  20%{top:75px;} 
+  40%{top:30px;}  
+  60%{top:100px;}
+  80%{top:200px}
+}
+
+@keyframes moveleft {
+  0%, 100%{left:50px}
+  14.28%{ left:10px}
+  28.57%{ left:90px}  
+  42.85%{ left:35px}
+  57.14%{ left:20px}
+  71.42%{ left:60px}
+  85.71%{ left:400px}
+}
+
+/**** The different states */
+#sidebar {
+}
